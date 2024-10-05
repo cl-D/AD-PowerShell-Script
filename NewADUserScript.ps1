@@ -14,5 +14,5 @@ ForEach ($Line in $FileContent) {
     $UPN = $SAM + $RandNumb + "@mydomain.local"
     $i++
 
-    New-ADUser -Name $Name -GivenName $FirstName -Surname $LastName -DisplayName $Name -SamAccountName $SAM -UserPrincipalName $UPN -Path "OU=_USERS, DC=mydomain, DC=local" -AccountPassword (ConvertTo-SecureString "Password123" -AsPlainText -Force) -Enabled $true -ChangePasswordAtLogon $false
+    New-ADUser -Name $Name -GivenName $FirstName -Surname $LastName -DisplayName $Name -SamAccountName $SAM -UserPrincipalName $UPN -Path "OU=_USERS, DC=mydomain, DC=local" -AccountPassword (ConvertTo-SecureString "Password123" -AsPlainText -Force) -Enabled $true -ChangePasswordAtLogon $true
 }
